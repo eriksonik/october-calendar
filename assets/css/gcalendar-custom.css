@@ -1,0 +1,59 @@
+.fc td.fc-widget-content {
+    border: none;
+}
+
+.fc-bg > table,
+.fc-content-skeleton > table,
+.fc-widget-header > table {
+    border-collapse: separate;
+    border-spacing: 6px 3px;
+}
+
+/* background ячеек дней */
+.fc-bg .fc-day {
+    border: none;
+    background-color: #f5f5f5;
+}
+.fc-bg .fc-day.fc-sun {
+    background-color: #ecf5eb;
+}
+.fc-bg .fc-day.fc-other-month {
+    background-color: #fff;
+}
+
+/* Цифры дней месяца */
+.fc-day-number {
+    font-weight: bold;
+    color: #bbb;
+    display: inline-block;
+    margin-right: 6px;
+}
+.fc-today .fc-day-number {
+    color: #55c6ec !important;
+}
+.fc-sun .fc-day-number {
+    color: #8fba8a;
+}
+
+/* background для дней недели */
+.fc-day-header.fc-widget-header {
+    background-color: #f5f5f5;
+}
+.fc-day-header.fc-widget-header.fc-sun {
+    background-color: #ecf5eb;
+}
+.fc-day-header.fc-widget-header span {
+    font-weight: 200;
+}
+
+/* background для текста событий */
+.fc-event-container .fc-content {
+    background: rgba(255, 0, 0, 0.15);
+}
+.fc-event-container .fc-content.ed-sun {
+    background: rgba(0, 255, 0, 0.15);
+}
+.fc-event-container .fc-content > span {
+    display: inline-block;
+    padding: 0 4px 2px;
+}

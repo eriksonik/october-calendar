@@ -13,6 +13,7 @@ class CreateCalendarsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
+            $table->string('slug')->nullable()->index();
             $table->string('key');
             $table->string('events');
             $table->text('description')->nullable();

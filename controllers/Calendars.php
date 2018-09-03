@@ -1,8 +1,8 @@
 <?php namespace Eriks\GoogleCalendar\Controllers;
 
 use Eriks\GoogleCalendar\Models\Calendar;
-use Flash;
-use BackendMenu;
+use October\Rain\Support\Facades\Flash;
+use Backend\Facades\BackendMenu;
 use Backend\Classes\Controller;
 
 

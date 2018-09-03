@@ -7,3 +7,5 @@
 1.0.4:
 - Add Calendar database and Calendar model.
 - create_calendars_table.php
+1.0.5:
+- Release.

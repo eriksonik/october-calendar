@@ -34,10 +34,13 @@ return [
         'description' => 'Description',
         'published' => 'Published',
         'published_at' => 'Published at',
-        'categories' => 'Categories',
         'slug_placeholder' => 'Enter slug',
         'name_placeholder' => 'Enter name',
         'description_placeholder' => 'Enter Description',
+        'key' => 'API Key',
+        'key_placeholder' => 'Enter API key',
+        'events' => 'Events',
+        'events_placeholder' => 'Enter events',
     ],
     'exeption' => [
         'publish_date_validation' => "Must specify a date"
@@ -58,5 +61,17 @@ return [
         'cancel' => 'Cancel',
         'or' => 'or',
         'return' => 'Return to calendars list'
+    ],
+    'update' => [
+        'saving' => 'Saving Calendar...',
+        'save' => 'Save',
+        'saveclose' => 'Save and Close',
+        'deleting' => 'Deleting Calendar...',
+        'reallydelete' => 'Do you really want to delete this Calendar?'
+    ],
+
+    'componentCalendar' => [
+        'name' => 'Calendar',
+        'description' => 'Select Calendar.',
     ],
 ];

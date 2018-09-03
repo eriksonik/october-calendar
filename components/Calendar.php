@@ -2,35 +2,39 @@
 
 namespace Eriks\GoogleCalendar\Components;
 
+use Lang;
 use Cms\Classes\ComponentBase;
+use Eriks\GoogleCalendar\Models\Calendar as CalendarModel;
 
 
 class Calendar extends ComponentBase {
 
-	public $calendar;
 
 	public function componentDetails()
 	{
 		return [
 			'name' => 'GoogleCalendar',
-			'description' => 'Display google-calendar on the pages of your site.'
+			'description' => 'Display Google-Calendar on the pages of your site.'
 		];
 	}
+
 
 	public function defineProperties()
 	{
 		return [
-			'api' => [
-				'title' => 'API key',
-				'type' => 'string',
-			],
-			'hash' => [
-				'title' => 'hash',
-				'type' => 'string',
-				'description' => 'hash@group.calendar.google.com',
-			],
+            'idCalendar' => [
+                'title' => Lang::get('eriks.googlecalendar::lang.componentCalendar.name'),
+                'type' => 'dropdown',
+                'description' => Lang::get('eriks.googlecalendar::lang.componentCalendar.description'),
+            ],
 		];
 	}
+
+
+    public function getidCalendarOptions()
+    {
+        return (new CalendarModel())::orderBy('name')->lists('name', 'id');
+    }
 
 
 	public function onRun()
@@ -46,8 +50,14 @@ class Calendar extends ComponentBase {
 
 	public function onRender()
 	{
-		$this->page['api'] = $this->property('api');
-		$this->page['hash'] = $this->property('hash');
+//		$this->page['api'] = $this->property('api');
+//		$this->page['hash'] = $this->property('hash');
+
+//        $ddd = (new CalendarModel())::find($this->property('idCalendar'));
+//        dd($ddd);
+//        dd($ddd->attributes);
+
+        $this->calendar = $this->page['calendar'] = (new CalendarModel())::find($this->property('idCalendar'));
 	}
 
 }

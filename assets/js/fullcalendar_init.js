@@ -12,7 +12,8 @@ $(document).ready(function () {
         firstDay: 1,
         displayEventTime: false, // don't show the time column in list view
         googleCalendarApiKey: googleCalendarApi,
-        events: googleCalendarHash + '@group.calendar.google.com',
+        // events: googleCalendarHash + '@group.calendar.google.com',
+        events: googleCalendarHash,
         eventColor: true,
         eventClick: function (event) {
             // opens events in a popup window
@@ -23,7 +24,7 @@ $(document).ready(function () {
             $('#loading').toggle(bool);
         },
         eventAfterAllRender: function (view) {
-            // Добавление класса для раскрашивания фона текста собития выходного дня.
+            // Добавление класса для раскрашивания фона текста события выходного дня.
             $('.fc-content > span').each(function () {
                 if ($(this).text() === 'Day Off') {
                     $(this).parent().addClass('ed-sun');

@@ -34,10 +34,13 @@ return [
         'description' => 'Описание',
         'published' => 'Опубликован',
         'published_at' => 'Опубликовано в',
-        'categories' => 'Категории',
         'slug_placeholder' => 'Введите slug',
         'name_placeholder' => 'Введите название',
         'description_placeholder' => 'Введите описание',
+        'key' => 'API Key',
+        'key_placeholder' => 'Введите ключ API',
+        'events' => 'Events',
+        'events_placeholder' => 'Введите events',
     ],
     'exeption' => [
         'publish_date_validation' => "Must specify a date"
@@ -58,5 +61,17 @@ return [
         'cancel' => 'Отмена',
         'or' => 'или',
         'return' => 'Вернуться к списку календарей'
+    ],
+    'update' => [
+        'saving' => 'Сохранение календаря...',
+        'save' => 'Сохранить',
+        'saveclose' => 'Сохранить и выйти',
+        'deleting' => 'Уделаение календаря...',
+        'reallydelete' => 'Вы и в правду хотите удалить календарь?'
+    ],
+
+    'componentCalendar' => [
+        'name' => 'Календарь',
+        'description' => 'Выбор календаря из установленных.',
     ],
 ];

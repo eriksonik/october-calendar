@@ -1,17 +1,35 @@
-.fc td.fc-widget-content {
+#calendar table {
+    border-collapse: collapse;
     border: none;
 }
-
-.fc-bg > table,
-.fc-content-skeleton > table,
-.fc-widget-header > table {
-    border-collapse: separate;
-    border-spacing: 6px 3px;
+.fc th, .fc td, .fc td.fc-today {
+    border-style: none;
 }
+.fc-day-header, .fc-bg .fc-day,
+.fc-content-skeleton .fc-day-top, .fc-content-skeleton .fc-event-container {
+    border: 4px #fff solid !important;
+    border-bottom: none !important;
+}
+.fc-content-skeleton .fc-day-top, .fc-content-skeleton .fc-event-container {
+    border-top: none !important;
+}
+.fc-day-header:first-child, .fc-bg .fc-day:first-child,
+.fc-content-skeleton .fc-day-top:first-child, .fc-content-skeleton .fc-event-container:first-child {
+    border-left: none !important;
+}
+.fc-day-header:last-child, .fc-bg .fc-day:last-child,
+.fc-content-skeleton .fc-day-top:last-child, .fc-content-skeleton .fc-event-container:last-child {
+    border-right: none !important;
+}
+
+.fc-event-container .fc-day-grid-event {
+    margin: 1px 0 0 4px;
+}
+
 
 /* background ячеек дней */
 .fc-bg .fc-day {
-    border: none;
+    /*border: none;*/
     background-color: #f5f5f5;
 }
 .fc-bg .fc-day.fc-sun {

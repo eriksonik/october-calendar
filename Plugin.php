@@ -1,9 +1,10 @@
-<?php
+<?php namespace Eriks\GoogleCalendar;
 
-namespace Eriks\GoogleCalendar;
-
+use App;
+use Event;
 use Backend;
 use System\Classes\PluginBase;
+use BackendMenu;
 
 /**
  * GoogleCalendar Plugin Information File
@@ -18,31 +19,11 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'GoogleCalendar',
-            'description' => 'GoogleCalendar via FullCalendar.',
+            'name'        => 'eriks.googlecalendar::lang.plugin.name',
+            'description' => 'eriks.googlecalendar::lang.plugin.description',
             'author'      => 'eriks',
             'icon'        => 'icon-calendar'
         ];
-    }
-
-    /**
-     * Register method, called when the plugin is first registered.
-     *
-     * @return void
-     */
-    public function register()
-    {
-
-    }
-
-    /**
-     * Boot method, called right before the request route.
-     *
-     * @return array
-     */
-    public function boot()
-    {
-
     }
 
     /**
@@ -64,7 +45,12 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
+        return [
+            'eriks.googlecalendar.*' => [
+                'tab' => 'eriks.googlecalendar::lang.plugin.name',
+                'label' => 'eriks.googlecalendar::lang.permissions.all'
+            ]
+        ];
     }
 
     /**
@@ -74,17 +60,31 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
+        return [
+            'calendar' => [
+                'label'       => 'eriks.googlecalendar::lang.menu.name',
+                'url'         => Backend::url('eriks/googlecalendar/calendars'),
+                'icon'        => 'icon-calendar',
+                'permissions' => ['eriks.googlecalendar.*'],
+                'order'       => 500,
 
-//        return [
-//            'videoplayer' => [
-//                'label'       => 'videoplayer',
-//                'url'         => Backend::url('eriks/videoplayer/mycontroller'),
-//                'icon'        => 'icon-leaf',
-//                'permissions' => ['eriks.videoplayer.*'],
-//                'order'       => 500,
-//            ],
-//        ];
+                'sideMenu' => [
+                    'calendars' => [
+                        'label'       => 'eriks.googlecalendar::lang.menu.calendars',
+                        'icon'        => 'icon-file-image-o',
+                        'url'         => Backend::url('eriks/googlecalendar/calendars'),
+                        'permissions' => ['eriks.googlecalendar.*']
+                    ],
+                    'new_calendar' => [
+                        'label'       => 'eriks.googlecalendar::lang.menu.new_calendar',
+                        'icon'        => 'icon-plus',
+                        'url'         => Backend::url('eriks/googlecalendar/calendars/create'),
+                        'permissions' => ['eriks.googlecalendar.*']
+                    ],
+                ],
+
+            ],
+        ];
     }
 
 }

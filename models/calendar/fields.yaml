@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    fields:
+        name:
+            label: eriks.googlecalendar::lang.modeldata.name
+
+        description:
+            label: eriks.googlecalendar::lang.modeldata.description
+            span: full
+            type: textarea

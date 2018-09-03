@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: eriks.googlecalendar::lang.idcalendar.title
+
+# Model Form Field configuration
+form: $/eriks/googlecalendar/models/calendar/fields.yaml
+
+# Model Class name
+modelClass: Eriks\GoogleCalendar\Models\Calendar
+
+# Default redirect location
+defaultRedirect: eriks/googlecalendar/calendars
+
+# Create page
+create:
+    title: eriks.googlecalendar::lang.form.create
+    redirect: eriks/googlecalendar/calendars/create
+    redirectClose: eriks/googlecalendar/calendars
+
+# Update page
+update:
+    title: eriks.googlecalendar::lang.form.update
+    redirect: eriks/googlecalendar/calendars/update/:id
+    redirectClose: eriks/googlecalendar/calendars
+
+# Preview page
+preview:
+    title: eriks.googlecalendar::lang.form.preview

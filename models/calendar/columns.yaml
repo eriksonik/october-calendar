@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: eriks.googlecalendar::lang.modeldata.name
+        searchable: true
+
+    published:
+        label: eriks.googlecalendar::lang.modeldata.published
+        type: switch
+
+    created_at:
+        label: eriks.googlecalendar::lang.modeldata.created
+
+    updated_at:
+        label: eriks.googlecalendar::lang.modeldata.updated

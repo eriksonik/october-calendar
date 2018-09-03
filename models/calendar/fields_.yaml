@@ -1,0 +1,44 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    fields:
+        name:
+            label: eriks.googlecalendar::lang.modeldata.name
+            placeholder: eriks.googlecalendar::lang.modeldata.name_placeholder
+            tab: eriks.googlecalendar::lang.tabs.info
+
+        description:
+            label: eriks.googlecalendar::lang.modeldata.description
+            span: full
+            type: textarea
+            tab: eriks.googlecalendar::lang.tabs.info
+            placeholder: eriks.googlecalendar::lang.modeldata.description_placeholder
+
+        key:
+            label: eriks.googlecalendar::lang.modeldata.key
+            placeholder: eriks.googlecalendar::lang.modeldata.slug_placeholder
+            tab: eriks.googlecalendar::lang.tabs.info
+
+        events:
+            label: eriks.googlecalendar::lang.modeldata.events
+            placeholder: eriks.googlecalendar::lang.modeldata.slug_placeholder
+            tab: eriks.googlecalendar::lang.tabs.info
+
+        published:
+            label: eriks.googlecalendar::lang.modeldata.published
+            type: switch
+            span: left
+            tab: eriks.googlecalendar::lang.tabs.settings
+
+        published_at:
+            label: eriks.googlecalendar::lang.modeldata.published_at
+            type: datepicker
+            mode: date
+            span: left
+            tab: eriks.googlecalendar::lang.tabs.settings
+            trigger:
+                action: enable
+                field: published
+                condition: checked

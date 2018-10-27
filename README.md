@@ -2,12 +2,10 @@
 Google Calendar for October CMS
 
 
-
 »нтегрируем Google-календарь в собственный веб-сайт - http://www.coolwebmasters.com/tutorials/2597-integrating-google-calendar-with-your-website.html
 
 http://www.lindenlan.net/2007/06/18/restyle-google-calendar-gadget/
 https://www.ibm.com/developerworks/ru/library/os-php-xpath/index.html
-
 
 
 ѕосле неудачных попыток осилить Google Calendar API начал исследовать парсинг iframe.

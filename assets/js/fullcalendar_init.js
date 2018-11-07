@@ -10,10 +10,23 @@ $(document).ready(function () {
             right: 'month,listYear'
         },
         firstDay: 1,
-        displayEventTime: false, // don't show the time column in list view
+        displayEventTime: true, // don't show the time column in list view
         googleCalendarApiKey: googleCalendarApi,
-        // events: googleCalendarHash + '@group.calendar.google.com',
-        events: googleCalendarHash,
+        // events: googleCalendarEvents + '@group.calendar.google.com',
+        // events: googleCalendarEvents,
+        // events: {
+        //     googleCalendarId: '61vq08irnnfte12n1rtl0dsmuc@group.calendar.google.com',
+        // },
+        eventSources: [
+            {
+                googleCalendarId: '61vq08irnnfte12n1rtl0dsmuc@group.calendar.google.com',
+                className: 'school-event'
+            },
+            {
+                googleCalendarId: 'ohpgd5nukc9ap0v50h3pvg0ev0@group.calendar.google.com',
+                className: 'academy-event'
+            }
+        ],
         eventColor: true,
         eventClick: function (event) {
             // opens events in a popup window

@@ -80,17 +80,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /**
 
 Тестирование мультикалендаря.
@@ -103,12 +92,19 @@
     background: none;
 }
 
-.school-event {
-    background: rgba(0, 255, 0, 0.15) !important;
+/*.school-event {*/
+    /*background: #0b8043 !important;*/
+    /*color: #fff !important;*/
+/*}*/
+/*.academy-event {*/
+    /*background: #f09300 !important;*/
+    /*color: #fff !important;*/
+/*}*/
+.fc--event {
+    background: transparent !important;
+    color: inherit !important;
 }
-.academy-event {
-    background: rgba(255, 140, 31, 0.25) !important;
-}
+
 
 #calendar .fc-content {
     white-space: normal;

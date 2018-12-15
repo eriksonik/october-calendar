@@ -75,3 +75,54 @@
     display: inline-block;
     padding: 0 4px 2px;
 }
+
+
+
+
+
+/**
+
+Тестирование мультикалендаря.
+
+ */
+.fc-event-container .fc-content {
+    background: none;
+}
+.fc-event-container .fc-content.ed-sun {
+    background: none;
+}
+
+/*.school-event {*/
+    /*background: #0b8043 !important;*/
+    /*color: #fff !important;*/
+/*}*/
+/*.academy-event {*/
+    /*background: #f09300 !important;*/
+    /*color: #fff !important;*/
+/*}*/
+.fc--event {
+    background: transparent !important;
+    color: inherit !important;
+}
+
+
+#calendar .fc-content {
+    white-space: normal;
+    padding: 0 2px 2px;
+    line-height: 1;
+}
+#calendar .fc-event .fc-time,
+#calendar .fc-event .fc-title {
+    font-size: .7rem;
+    white-space: normal;
+    font-weight: normal;
+    display: inline;
+    padding: 0;
+}
+#calendar .fc-event .fc-time {
+    font-weight: 600;
+}
+#calendar .fc-event .fc-title {}
+
+
+
